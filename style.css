@@ -39,6 +39,13 @@ body {
 
 .row {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    perspective: 1500px;
+    margin-bottom: 40px;
 }
 
 .seat {
@@ -59,11 +66,11 @@ body {
 }
 
 .seat:nth-of-type(2) {
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .seat:nth-last-of-type(2) {
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .seat:not(.occupied):hover {
@@ -82,7 +89,6 @@ body {
     color: #666;
     list-style: none;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -95,4 +101,18 @@ body {
 
 .showcase li small {
     margin-left: 4px;
+}
+
+.screen {
+    background-color: hsl(222, 65%, 82%);
+    height: 80px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 5px 8px hsla(222, 65%, 82%, 0.7), 0 2px 2px hsla(220, 13%, 91%, 0.7);
+}
+
+#count,
+#total {
+    color: hsl(329, 86%, 70%);
 }
