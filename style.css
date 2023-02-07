@@ -23,6 +23,10 @@ body {
     height: 100vh;
 }
 
+p {
+    margin: 40px 0;
+}
+
 .movie-container {
     margin: 20px 0;
 }
