@@ -1,17 +1,98 @@
 @import url(https://fonts.bunny.net/css?family=biz-udpgothic:400,700);
 
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-	font-family: "BIZ UDPGothic", sans-serif;
-	font-size: 1.6rem;
-	font-weight: 400;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: hsl(222, 47%, 11%);
+    display: flex;
+    color: hsl(222, 65%, 82%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.movie-container {
+    margin: 20px 0;
+}
+
+.movie-container select {
+    background-color: hsl(222, 65%, 82%);
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 8px 20px;
+    appearance: none;
+}
+
+.row {
+    display: flex;
+}
+
+.seat {
+    background-color: hsl(217, 33%, 17%);
+    height: 16px;
+    width: 20px;
+    margin: 5px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 4px 6px 0 0 rgba(0, 0, 0, 0.21);
+}
+
+.seat.selected {
+    background-color: hsl(329, 86%, 70%);
+}
+
+.seat.occupied {
+    background-color: hsl(220, 13%, 91%);
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 20px;
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 20px;
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase {
+    background-color: hsl(224, 48%, 9%);
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #666;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 4px;
 }
